@@ -1,36 +1,152 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ⚒️ Minecraft Enchantment Optimizer
 
-## Getting Started
+A modern **Minecraft Enchantment Optimizer** built with **Next.js**, designed to calculate the most XP-efficient order for combining enchanted books and items using an anvil.
 
-First, run the development server:
+The optimizer minimizes experience cost by finding the optimal merge tree while respecting Minecraft's anvil mechanics, work penalties, enchantment conflicts, and edition-specific rules.
+
+## ✨ Features
+
+* 🎯 Calculate the cheapest enchantment order
+* 📚 Add existing enchantments already on an item
+* 📖 Add multiple enchanted books
+* ⚡ XP-efficient merge algorithm
+* 🛡️ Detect conflicting enchantments
+* ☕ Supports both **Java** and **Bedrock** editions
+* 🪓 Supports nearly every enchantable item:
+
+  * Swords
+  * Pickaxes
+  * Axes
+  * Shovels
+  * Hoes
+  * Helmets
+  * Chestplates
+  * Leggings
+  * Boots
+  * Bows
+  * Crossbows
+  * Tridents
+  * Maces
+  * Elytra
+  * Fishing Rods
+  * Books
+* 💻 Clean, responsive interface
+* ⚙️ Built with TypeScript and React
+
+---
+
+## 📸 Preview
+
+> Add a screenshot or GIF here.
+
+```
+public/screenshot.png
+```
+
+---
+
+## 🚀 Getting Started
+
+### Clone the repository
+
+```bash
+git clone https://github.com/yourusername/minecraft-enchantment-optimizer.git
+
+cd minecraft-enchantment-optimizer
+```
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Run the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🧮 How It Works
 
-To learn more about Next.js, take a look at the following resources:
+The optimizer recreates Minecraft's anvil mechanics, including:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* Prior work penalties
+* Enchantment costs
+* XP conversion formulas
+* Merge tree optimization
+* Maximum anvil level limits
+* Enchantment compatibility rules
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+It searches possible merge combinations and chooses the one with the lowest total XP cost.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🛠 Tech Stack
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+* **Next.js 16**
+* **React 19**
+* **TypeScript**
+* **Tailwind CSS v4**
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+ ├── app/
+ │   ├── page.tsx
+ │   └── layout.tsx
+ │
+ ├── components/
+ │   └── Tooltip.tsx
+ │
+ └── lib/
+     ├── enchantments.ts
+     ├── optimizer.ts
+     └── types.ts
+
+public/
+ └── items/
+```
+
+---
+
+## 🎮 Supported Editions
+
+* ✅ Minecraft Java Edition
+* ✅ Minecraft Bedrock Edition
+
+Edition-specific enchantment rules and compatibility are handled automatically.
+
+---
+
+## 🤝 Contributing
+
+Contributions, bug reports, and feature requests are welcome.
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Open a Pull Request
+
+---
+
+## 📄 License
+
+This project is open source. Feel free to use, modify, and distribute it under the license of your choice.
+
+---
+
+## ❤️ Acknowledgements
+
+Inspired by Minecraft's anvil mechanics and community enchantment optimization research. Thanks to the Minecraft community for documenting enchantment behavior and XP calculations.
